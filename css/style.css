@@ -1,0 +1,543 @@
+/* Modern CSS with Colors */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #1a1a1a;
+    --bg-color: #ffffff;
+    --border-color: #e0e0e0;
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary-color: #8b5cf6;
+    --accent-color: #ec4899;
+    --success-color: #10b981;
+    --bg-light: #f8fafc;
+    --bg-section: #f1f5f9;
+    --text-muted: #64748b;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+nav a:not(:first-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hide the checkbox */
+.nav-trigger {
+    display: none;
+}
+
+/* Hide menu links on mobile by default */
+.trigger {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Show menu when checkbox is checked */
+.nav-trigger:checked + label + .trigger {
+    display: flex;
+}
+
+/* Hamburger icon styling */
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Optional: style links inside trigger */
+.trigger .page-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.trigger .page-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* Sections */
+section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: var(--bg-section);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+section#home {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    padding-top: 0;
+}
+
+section#about {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+section#projects {
+    background: linear-gradient(135deg, #fdf4ff 0%, #f3e8ff 100%);
+}
+
+section#certificates {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.home-card {
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border-left: 4px solid var(--primary-color);
+}
+
+.home-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+    transform: translateY(-4px);
+}
+
+.text-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background: transparent;
+}
+
+/* Style for images - no background by default */
+img[src*="assets/images"] {
+    border: none;
+    background: transparent;
+    opacity: 1;
+}
+
+/* Handle broken/missing images */
+img[src=""],
+img:not([src]) {
+    background-color: var(--bg-light);
+    border: 2px dashed var(--border-color);
+}
+
+/* Ensure images are visible */
+img[src*="assets/images"]:not([src=""]) {
+    background: none !important;
+}
+/* Button icons */
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border-radius: 3px;
+    object-fit: contain;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+.cta-button:nth-child(2) {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
+}
+
+.cta-button:nth-child(2):hover {
+    background-color: #7c3aed;
+    box-shadow: 0 4px 8px rgba(139, 92, 246, 0.3);
+}
+
+/* Projects */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.project-card:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+    transform: translateY(-4px);
+}
+
+.project-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.project-card a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.project-card a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.project-card img.project-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  
+/* Certificates */
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cert-card {
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border-top: 4px solid var(--success-color);
+}
+
+.cert-card:hover {
+    border-color: var(--success-color);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+    transform: translateY(-4px);
+}
+
+.cert-img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+    background: transparent;
+    border-radius: 6px;
+    object-fit: contain;
+}
+
+.cert-card p {
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.cert-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    margin-top: 6rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--primary-color);
+    text-align: center;
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--primary-hover);
+}
+
+.footer-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Site Header and Navigation */
+.site-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.site-nav {
+    position: relative;
+}
+
+.nav-trigger {
+    display: none;
+}
+
+.trigger {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+.page-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.page-link:hover {
+    color: var(--primary-color);
+}
+
+.menu-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-trigger {
+        display: block; /* show checkbox for hamburger */
+    }
+
+    .menu-icon {
+        display: inline-block; /* show hamburger icon */
+        cursor: pointer;
+    }
+
+    .trigger {
+        display: none; /* hide menu links by default */
+        flex-direction: row; /* horizontal links */
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap; /* allow wrapping on small screens */
+    }
+
+    /* Show menu when checkbox is checked */
+    .nav-trigger:checked + label + .trigger {
+        display: flex;
+    }
+}
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav li:first-child {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-container {
+        gap: 0.5rem;
+    }
+
+    .projects-container,
+    .cert-container {
+        grid-template-columns: 1fr;
+    }
+
