@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -51,3 +52,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+=======
+theme: jekyll-theme-minimal
+title: Amina's homepage
+description: Bookmark this to keep an eye on my project updates!
+>>>>>>> 9c065ba5cf1ab3ebb0a71d87c00f62a008581242

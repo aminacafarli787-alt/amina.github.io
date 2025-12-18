@@ -1,5 +1,6 @@
 ---
 layout: default
+<<<<<<< HEAD
 ---
 
 <section id="home" class="home-section">
@@ -32,3 +33,14 @@ layout: default
 
   </div>
 </section>
+=======
+title: Home
+---
+
+# Welcome to my Portfolio
+
+Hi, I’m **Your Name**, an IT student at ADA University and aspiring back-end developer.
+
+[About Me](about.md)  
+[Projects](projects.md)
+>>>>>>> 9c065ba5cf1ab3ebb0a71d87c00f62a008581242
