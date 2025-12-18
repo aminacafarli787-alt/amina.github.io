@@ -10,10 +10,10 @@
     --text-color: #1a1a1a;
     --bg-color: #ffffff;
     --border-color: #e0e0e0;
-    --primary-color: #6366f1;
-    --primary-hover: #4f46e5;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    --primary-color: #10b981;
+    --primary-hover: #059669;
+    --secondary-color: #16a34a;
+    --accent-color: #dc2626;
     --success-color: #10b981;
     --bg-light: #f8fafc;
     --bg-section: #f1f5f9;
@@ -163,16 +163,16 @@ header {
 }
 
 section#home {
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #d1fae5 100%);
     padding-top: 0;
 }
 
 section#about {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, #f0f9ff 0%, #dcfce7 100%);
 }
 
 section#projects {
-    background: linear-gradient(135deg, #fdf4ff 0%, #f3e8ff 100%);
+    background: linear-gradient(135deg, #fdf4ff 0%, #ecfdf5 100%);
 }
 
 section#certificates {
@@ -233,6 +233,13 @@ img:not([src]) {
 img[src*="assets/images"]:not([src=""]) {
     background: none !important;
 }
+
+.image-container img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
 /* Button icons */
 .btn-icon {
     width: 18px;
@@ -264,17 +271,17 @@ img[src*="assets/images"]:not([src=""]) {
 .cta-button:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
 }
 
 .cta-button:nth-child(2) {
     background-color: var(--secondary-color);
-    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 2px 4px rgba(22, 163, 74, 0.2);
 }
 
 .cta-button:nth-child(2):hover {
-    background-color: #7c3aed;
-    box-shadow: 0 4px 8px rgba(139, 92, 246, 0.3);
+    background-color: #0f5132;
+    box-shadow: 0 4px 8px rgba(22, 163, 74, 0.3);
 }
 
 /* Projects */
@@ -296,7 +303,7 @@ img[src*="assets/images"]:not([src=""]) {
 
 .project-card:hover {
     border-color: var(--secondary-color);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.15);
     transform: translateY(-4px);
 }
 
