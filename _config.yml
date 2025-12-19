@@ -24,8 +24,7 @@ title: Amina's personal website
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://github.com/aminacafarli787-alt/amina.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
 
 # Build settings
 theme: minima
@@ -53,7 +52,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 =======
-theme: jekyll-theme-minimal
-title: Amina's homepage
-description: Bookmark this to keep an eye on my project updates!
->>>>>>> 9c065ba5cf1ab3ebb0a71d87c00f62a008581242
+title: Amina's personal website
+description: Welcome to my personal website
+
+
+
