@@ -25,6 +25,8 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://github.com/aminacafarli787-alt/amina.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
+title: "Amina's personal website"
+description: "Welcome to my personal website"
 
 # Build settings
 theme: minima
@@ -51,9 +53,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-=======
-title: Amina's personal website
-description: Welcome to my personal website
+
+
 
 
 
