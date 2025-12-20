@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Certificates
+permalink: /certificates/
 ---
 
 <section id="certificates">
