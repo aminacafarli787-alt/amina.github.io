@@ -1,24 +1,14 @@
-
-
-
-
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://aminacafarli787-alt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
 title: "Amina's personal website"
 description: "Welcome to my personal website"
-
-# Build settings
+author: "Amina Jafarli"
+url: "https://aminacafarli787-alt.github.io" # your GitHub Pages URL
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
-  
 include:
   - assets
-
 markdown: kramdown
 
 
