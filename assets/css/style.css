@@ -495,27 +495,25 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .nav-trigger {
-        display: block; /* show checkbox for hamburger */
+        display: block;
     }
 
     .menu-icon {
-        display: inline-block; /* show hamburger icon */
+        display: inline-block;
         cursor: pointer;
     }
 
     .trigger {
-        display: none; /* hide menu links by default */
-        flex-direction: row; /* horizontal links */
+        display: none;
+        flex-direction: row;
         gap: 1rem;
         margin-top: 1rem;
-        flex-wrap: wrap; /* allow wrapping on small screens */
+        flex-wrap: wrap;
     }
 
-    /* Show menu when checkbox is checked */
     .nav-trigger:checked + label + .trigger {
         display: flex;
     }
-}
 
     nav ul {
         gap: 1rem;
@@ -551,4 +549,4 @@ footer {
     .cert-container {
         grid-template-columns: 1fr;
     }
-
+}
